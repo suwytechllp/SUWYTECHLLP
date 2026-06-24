@@ -1,0 +1,25 @@
+# SUWY TECH LLP
+
+**Website:** https://suwytechllp.in
+**Description:** Best AI training institute, best DevOps training center, and best software development training center in Kerala.
+**Services:** Software Development (Web & Mobile App), Professional Training, Technology Consultancy.
+
+## Training Programs
+- Artificial Intelligence (ML, Deep Learning, GenAI)
+- AI & Python (Automation, AI workflows)
+- DevOps (CI/CD, Docker, Kubernetes, AWS)
+- Angular Training (TypeScript, RxJS, Enterprise apps)
+- React Course (Hooks, Redux, Next.js)
+
+## Proprietary Products
+- **True Match Matrimony:** AI-driven matchmaking platform.
+- **SWChits:** Advanced audit-compliant Chitty Management application.
+
+## Leadership
+- **Suni Surendran:** Managing Partner (Strategy & Technology Vision)
+- **Allwyn Anto:** Managing Partner (Delivery Quality & Engineering)
+
+## Contact Information
+**Address:** Vazhappilly Towers, Kinfra Park P O, Pin-680309, Thrissur District, Kerala, India (Serving Thrissur, Koratty, Angamaly, Aluva, Ernakulam, Mala, Chalakudy)
+**Phone:** +91-9037246845
+**Email:** suwytechllp@gmail.com
