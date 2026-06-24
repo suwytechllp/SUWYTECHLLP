@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suwytechllp.in/sitemap.xml
