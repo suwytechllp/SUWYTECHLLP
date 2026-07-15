@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://suwytechllp.in/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://suwytechllp.in/assets/logo.webp</image:loc>
+      <image:title>SUWY TECH LLP Logo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://suwytechllp.in/about.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://suwytechllp.in/services.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://suwytechllp.in/projects.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://suwytechllp.in/assets/truematch.webp</image:loc>
+      <image:title>True Match Matrimony App by SUWY TECH LLP</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://suwytechllp.in/assets/swchits.webp</image:loc>
+      <image:title>SWChits Chitty Management App by SUWY TECH LLP</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://suwytechllp.in/clients.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

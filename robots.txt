@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Disallow admin or temporary files
+Disallow: /optimize_html.py
+Disallow: /*.py$
+
+# Crawl delay
+Crawl-delay: 1
+
 Sitemap: https://suwytechllp.in/sitemap.xml

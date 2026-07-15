@@ -136,52 +136,71 @@ document.addEventListener('DOMContentLoaded', () => {
     statValues.forEach(el => counterObserver.observe(el));
   }
 
-  // ===== Copy Address Utility =====
+  // ===== Copy Address Utility (kept for legacy; button removed from index) =====
   const copyAddressBtn = document.getElementById('copy-address-btn');
   if (copyAddressBtn) {
     copyAddressBtn.addEventListener('click', () => {
       const addressText = 'Vazhappilly Towers, Kinfra Park P O, Pin-680309, Thrissur District, Kerala, India';
-
       const copyToClipboard = (text) => {
-        if (navigator.clipboard && window.isSecureContext) {
-          return navigator.clipboard.writeText(text);
-        }
+        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
         return new Promise((resolve, reject) => {
           const textArea = document.createElement('textarea');
           textArea.value = text;
-          textArea.style.position = 'fixed';
-          textArea.style.left = '-999999px';
-          textArea.style.top = '-999999px';
+          textArea.style.cssText = 'position:fixed;left:-999999px;top:-999999px';
           document.body.appendChild(textArea);
-          textArea.focus();
-          textArea.select();
-          try {
-            const successful = document.execCommand('copy');
-            document.body.removeChild(textArea);
-            successful ? resolve() : reject(new Error('execCommand copy failed'));
-          } catch (err) {
-            document.body.removeChild(textArea);
-            reject(err);
-          }
+          textArea.focus(); textArea.select();
+          try { document.execCommand('copy') ? resolve() : reject(); document.body.removeChild(textArea); }
+          catch(err) { document.body.removeChild(textArea); reject(err); }
         });
       };
-
       copyToClipboard(addressText)
-        .then(() => {
-          const originalHTML = copyAddressBtn.innerHTML;
-          copyAddressBtn.innerHTML = `<i data-lucide="check"></i> Copied!`;
-          if (typeof lucide !== 'undefined') lucide.createIcons();
-          showToast('Address copied to clipboard!');
-          setTimeout(() => {
-            copyAddressBtn.innerHTML = originalHTML;
-            if (typeof lucide !== 'undefined') lucide.createIcons();
-          }, 2000);
-        })
-        .catch(err => {
-          console.error('Failed to copy address: ', err);
-          showToast('Failed to copy. Please highlight and copy manually.');
-        });
+        .then(() => { showToast('Address copied to clipboard!'); })
+        .catch(() => { showToast('Failed to copy. Please copy manually.'); });
     });
+  }
+
+  // ===== Course Combo Slider =====
+  const comboSlider = document.getElementById('combo-slider');
+  const comboDots = document.getElementById('combo-dots');
+  if (comboSlider && comboDots) {
+    const cards = comboSlider.querySelectorAll('.combo-card');
+    const dots = comboDots.querySelectorAll('.combo-dot');
+    let current = 0;
+    let autoplayTimer;
+
+    const goTo = (index) => {
+      cards[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + cards.length) % cards.length;
+      cards[current].classList.add('active');
+      dots[current].classList.add('active');
+    };
+
+    const startAutoplay = () => {
+      clearInterval(autoplayTimer);
+      autoplayTimer = setInterval(() => goTo(current + 1), 4000);
+    };
+
+    // Initialise first card
+    cards[0].classList.add('active');
+
+    // Dot click
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.index, 10));
+        startAutoplay();
+      });
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    comboSlider.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    comboSlider.addEventListener('touchend', (e) => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); startAutoplay(); }
+    }, { passive: true });
+
+    startAutoplay();
   }
 
   // ===== Toast notification =====
@@ -191,41 +210,23 @@ document.addEventListener('DOMContentLoaded', () => {
       toast = document.createElement('div');
       toast.className = 'custom-toast';
       Object.assign(toast.style, {
-        position: 'fixed',
-        bottom: '2rem',
-        right: '2rem',
-        padding: '1rem 1.5rem',
-        borderRadius: '14px',
-        color: '#ffffff',
-        fontSize: '0.95rem',
-        fontWeight: '500',
-        zIndex: '2000',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.75rem',
+        position: 'fixed', bottom: '2rem', right: '2rem',
+        padding: '1rem 1.5rem', borderRadius: '14px', color: '#ffffff',
+        fontSize: '0.95rem', fontWeight: '500', zIndex: '2000',
+        display: 'flex', alignItems: 'center', gap: '0.75rem',
         border: '1px solid rgba(255, 180, 0, 0.4)',
         background: 'rgba(10, 15, 31, 0.95)',
         boxShadow: '0 12px 40px rgba(255, 180, 0, 0.25)',
-        opacity: '0',
-        transform: 'translateY(20px)',
+        opacity: '0', transform: 'translateY(20px)',
         transition: 'opacity 0.4s ease, transform 0.4s ease',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)'
+        backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)'
       });
       document.body.appendChild(toast);
     }
     toast.innerHTML = `<i data-lucide="info" style="color: #FFB400"></i> <span>${message}</span>`;
     if (typeof lucide !== 'undefined') lucide.createIcons();
-
-    setTimeout(() => {
-      toast.style.opacity = '1';
-      toast.style.transform = 'translateY(0)';
-    }, 10);
-
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateY(20px)';
-    }, 3000);
+    setTimeout(() => { toast.style.opacity = '1'; toast.style.transform = 'translateY(0)'; }, 10);
+    setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateY(20px)'; }, 3000);
   }
 
   // ===== Smooth scroll for in-page anchors =====
@@ -234,10 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = a.getAttribute('href');
       if (targetId.length > 1) {
         const target = document.querySelector(targetId);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
       }
     });
   });
