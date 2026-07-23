@@ -1,25 +1,21 @@
 # SUWY TECH LLP
 
-**Website:** https://suwytechllp.in
-**Description:** Best AI training institute, best DevOps training center, and best software development training center in Kerala.
-**Services:** Software Development (Web & Mobile App), Professional Training, Technology Consultancy.
+> Best software development training center, DevOps training institute, and AI training center in Kerala. SUWY TECH LLP provides enterprise-level professional training, technology consultancy, and custom software development services.
+
+## Core Services & Products
+
+- [Software Development Services](https://suwytechllp.in) - Custom web and mobile application development pipelines.
+- [Technology Consultancy](https://suwytechllp.in) - Engineering strategy, delivery quality, and architectural guidance.
+- [True Match Matrimony](https://suwytechllp.in) - Proprietary AI-driven matchmaking and compatibility platform.
+- [SWChits](https://suwytechllp.in) - Audit-compliant Chitty and financial management application.
 
 ## Training Programs
-- Artificial Intelligence (ML, Deep Learning, GenAI)
-- AI & Python (Automation, AI workflows)
-- DevOps (CI/CD, Docker, Kubernetes, AWS)
-- Angular Training (TypeScript, RxJS, Enterprise apps)
-- React Course (Hooks, Redux, Next.js)
 
-## Proprietary Products
-- **True Match Matrimony:** AI-driven matchmaking platform.
-- **SWChits:** Advanced audit-compliant Chitty Management application.
+- [Artificial Intelligence & Python](https://suwytechllp.in) - Curriculum covering Machine Learning, Deep Learning, Generative AI, and automation workflows.
+- [DevOps Engineering](https://suwytechllp.in) - Hands-on training for CI/CD, Docker, Kubernetes, and AWS cloud management.
+- [Frontend Development (Angular & React)](https://suwytechllp.in) - Enterprise application patterns using TypeScript, RxJS, Hooks, Redux, and Next.js.
 
-## Leadership
-- **Suni Surendran:** Managing Partner (Strategy & Technology Vision)
-- **Allwyn Anto:** Managing Partner (Delivery Quality & Engineering)
+## Leadership & Contact
 
-## Contact Information
-**Address:** Vazhappilly Towers, Kinfra Park P O, Pin-680309, Thrissur District, Kerala, India (Serving Thrissur, Koratty, Angamaly, Aluva, Ernakulam, Mala, Chalakudy)
-**Phone:** +91-9037246845
-**Email:** suwytechllp@gmail.com
+- [Corporate Leadership](https://suwytechllp.in) - Directed by Managing Partners Suni Surendran (Strategy & Tech Vision) and Allwyn Anto (Delivery Quality & Engineering).
+- [Contact and Location](https://suwytechllp.in) - Headquartered at Vazhappilly Towers, Kinfra Park P O, Thrissur, Kerala, Pin-680309. Serving Thrissur, Koratty, Angamaly, Aluva, Ernakulam, Mala, and Chalakudy.
