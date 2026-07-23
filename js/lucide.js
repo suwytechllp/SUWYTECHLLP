@@ -270,6 +270,13 @@
           },
         ],
       ],
+        "monitor": [ ["rect", { width: "20", height: "14", x: "2", y: "3", rx: "2" }], ["path", { d: "M12 17v4" }], ["path", { d: "M8 21h8" }] ],
+  "smartphone": [
+    ["rect", { width: "14", height: "20", x: "5", y: "2", rx: "2", ry: "2" }],
+    ["path", { d: "M12 18h.01" }]
+  ],
+"cpu": [ ["rect", { width: "16", height: "16", x: "4", y: "4", rx: "2" }], ["path", { d: "M9 9h6v6H9z" }], ["path", { d: "M9 1v3" }], ["path", { d: "M15 1v3" }], ["path", { d: "M9 20v3" }], ["path", { d: "M15 20v3" }], ["path", { d: "M20 9h3" }], ["path", { d: "M20 15h3" }], ["path", { d: "M1 9h3" }], ["path", { d: "M1 15h3" }] ],
+
 
       // Add your remaining 69 path nodes here from your source grid...
     };
