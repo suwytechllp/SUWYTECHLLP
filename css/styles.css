@@ -2160,3 +2160,19 @@ p { color: var(--text-secondary); }
     padding-bottom: max(2rem, env(safe-area-inset-bottom));
   }
 }
+.combo-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+}
+
+/* This creates an invisible 48x48px clickable box centered over your small dot */
+.combo-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+}
