@@ -2176,3 +2176,92 @@ p { color: var(--text-secondary); }
   width: 48px;
   height: 48px;
 }
+
+
+
+/* Footer Social Media Container */
+.footer-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Individual Social Icon Links */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px; /* വട്ടത്തിലുള്ള ഡിസൈൻ */
+  background: rgba(255, 255, 255, 0.05); /* പശ്ചാത്തലത്തിലെ നേരിയ നിറം */
+  color: #ffffff; /* ഐക്കണിന്റെ നിറം */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease; /* ആനിമേഷൻ സുഗമമാക്കാൻ */
+  text-decoration: none;
+}
+
+/* Icons sizing inside the link */
+.footer-social a svg,
+.footer-social a i {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects (മൗസ് മുകളിൽ വെക്കുമ്പോൾ) */
+.footer-social a:hover {
+  background: var(--accent-gold, #dfb76c); /* നിങ്ങളുടെ ഗോൾഡ് തീം നിറം */
+  color: #000000; /* ഹോവർ ചെയ്യുമ്പോൾ ഐക്കൺ കറുപ്പ് നിറമാകും */
+  border-color: var(--accent-gold, #dfb76c);
+  box-shadow: 0 4px 15px rgba(223, 183, 108, 0.3); /* നേരിയ തിളക്കം */
+}
+
+/* Hover ചെയ്യുമ്പോൾ ഐക്കൺ ചെറുതായി മുകളിലേക്ക് പൊങ്ങാൻ */
+.footer-social a:hover svg,
+.footer-social a:hover i {
+  transform: translateY(-2px);
+}
+
+
+
+/* ==========================================================================
+   Self-Hosted Web Fonts
+   ========================================================================== */
+
+/* Outfit - Regular (400) */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/outfit-v15-latin-regular.woff2') format('woff2');
+}
+
+/* Outfit - Bold (700) */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/outfit-v15-latin-700.woff2') format('woff2');
+}
+
+/* Space Grotesk - Regular (400) */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/space-grotesk-v22-latin-regular.woff2') format('woff2');
+}
+
+/* Space Grotesk - Bold (700) */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+}
